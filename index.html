@@ -2,240 +2,408 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <title>
+        SAP FICO Training
+    </title>
     <style>
+        /**
         .container {
+            width: 100%;
             background-color: whitesmoke;
-            width: 100%;
-        }
+        }**/
 
-        .products {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 300px;
-            grid-gap: 2rem;
-            background-color: whitesmoke;
-            width: 100%;
-            margin: 0 auto;
-
-        }
-
-        .grid-item {
-            background-color: white;
-            padding: 20px;
-            text-align: center;
-            border-right: 1px solid gray;
-            border-left: 1px solid gray;
-            height: 250px;
-        }
-
-        .nav {
-            background-color: turquoise;
-            width: 100%;
-        }
-
-        .text {
-            width: auto;
-            padding: 20px;
-            text-align: center;
-            color: black;
-            background-color: whitesmoke;
-        }
-
-        .youtube {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: white;
-            width: 100%;
-
-        }
-
-        .footer {
-            width: 100%;
-            height: 100px;
-            background-color: white;
-            color: black;
-            margin-top: -15px;
-        }
-
-        .footer a {
-            color: black;
-        }
-
-        .footer ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .footer li a {
-            text-decoration: none;
-            float: right;
-            padding: 16px 20px;
-            font-size: large;
-        }
-
-        .footer a:hover {
-            color: rgb(104, 113, 241);
-        }
-
-
-        .selectbutton {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin: 0 auto;
-            background-color: rgb(104, 113, 241);
-            color: white;
-            height: 50px;
-            width: 100px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        a:link {
-            text-decoration: none;
-        }
-
-        .selectbutton:hover {
-            background-color: black;
-            color: cornflowerblue;
-        }
-
-        h2 {
-            margin: -20px -20px 2px -20px;
-            padding: 10px;
-            text-align: center;
-            height: 50px;
-            background-color: whitesmoke;
-            color: rgb(104, 113, 241);
-        }
-
-        h3 {
-            text-align: center;
-            margin-bottom: 2px;
-            color: rgb(104, 113, 241);
-            font-size: larger;
-        }
-
-        .producttext {
-            font-size: large;
-            font-weight: lighter;
-        }
-
-        .nav ul {
-            list-style-type: none;
-            background-color: white;
-            margin: 0;
-            padding: 0;
+        .menu {
+            background-color: transparent;
+            border-right: 5px solid gray;
+            width: 350px;
+            float: left;
             overflow: hidden;
+            position: -webkit-sticky;
+            /* Safari */
+            position: sticky;
             top: 0;
-            width: 100%;
-            font-size: 20px;
         }
 
-        .nav li a {
-            display: block;
-            padding: 14px 16px;
-            color: black;
-            text-align: center;
-            text-decoration: none;
+        h2,
+        h3 {
+
+            margin-bottom: 2px;
         }
 
         .nav li {
-            float: right;
+            border-bottom: 2px solid red;
+            height: 50px;
+            font-size: 18px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
         }
 
-        .nav li :hover {
-            background: black;
-            color: cornflowerblue;
-            border-radius: 10px;
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li a:link {
+            color: rgb(13, 3, 58);
+            text-decoration: none;
+        }
+
+        li a:hover {
+            color: red
+        }
+
+        /*li:hover {
+            background-color: rgb(79, 156, 245);
+        }*/
+
+        .content {
+            padding: 0px 20px 20px 20px;
+            text-align: justify;
+            background-color: white;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: medium;
+            margin-top: -20px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 300px auto;
+            grid-template-rows: auto auto;
+            background-color: white;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .grid-item {
+            background-color: whitesmoke;
+
+        }
+
+        .navheader {
+            background: red;
+            color: white;
+            border-bottom: 1px solid red;
+            width: 350px;
+            height: 70px;
+            margin: 0 auto;
+            padding: 5px 0 5px 0;
+            text-align: center;
+            font-family: Georgia, serif;
+        }
+
+        .nav {
+            background: whitesmoke;
+
+            height: 350px;
+            overflow-y: auto;
+            padding: 0;
+            width: 100%;
+
+        }
+
+        .contact {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 200px;
+            grid-gap: 2rem;
+            width: 100%;
+            margin: 0 auto;
+            background-color: white;
+            padding-top: 20px;
+            border-style: solid;
+            border-color: red;
+            border-width: 2px 0 2px 0;
+        }
+
+        .item {
+            padding: 0px 20px 0 20px;
+            width: 50px;
+        }
+
+        footer {
+            width: 100%;
+            background-color: white;
+            text-align: center;
+            font-size: small;
+        }
+
+        footer a:link {
+            text-decoration: none;
+            color: red;
+        }
+
+        .contact li {
+            height: 50px;
+            color: white;
+            font-size: 15px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: left;
+            padding-left: 90px;
+        }
+
+        .contact a:link {
+            color: rgb(13, 3, 58);
+        }
+
+        .contact a:hover {
+            color: rgb(223, 76, 8);
+        }
+
+        .bottom {
+            margin-bottom: 2rem;
+        }
+
+        .advert {
+            color: black;
+            border: 2px solid rgb(2, 151, 27);
+            background-color: white;
+            width: 250px;
+            padding: 20px;
+            margin-top: 30px;
+            font-size: large;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .advert2 {
+            color: white;
+            background-color: red;
+            width: 250px;
+            padding: 20px;
+            margin-top: 30px;
+            font-size: large;
+            text-align: justify;
+            font-weight: 600;
+        }
+
+        .advert a {
+            text-decoration: none;
+            color: red;
         }
     </style>
-
 </head>
 
 <body>
     <div class="container">
-        <div class="nav">
-            <ul>
-                <li><a href="features" target="_self">Features</a></li>
-                <li><a href="demo" target="_self">Demo</a></li>
-                <li><a href="price" target="_self">Pricing</a></li>
-                <li><a href="contact" target="_self">Contact us</a></li>
-                <li><a href="Returning customer" target="_self">Returning Customer</a></li>
+        <div class="grid-item">
+            <div class="navheader">
+                <h1>SAP FICO</h1>
 
-            </ul>
-        </div>
-        <div class="text">
-            <p>
-            <h1>Networking Devices</h1>
-            </p>
-            <p><label>
-                    <input type="text" name="email" placeholder="Input your email...."
-                        style="width: 300px; height: 30px;border:1px solid rgb(104, 113, 241) ">
-                    <p style="padding-bottom: 20px;">
-                        <input type="button" name="submit" value="submit" style="width: 100px; height: 30px; background-color: rgb(104, 113, 241);
-                        border: none; font-size: larger; font-weight: 700; color: white;">
-                </label>
-            <p>
-
-            <h3>Premium Materials</h3>
-            Our devices are direct from our the manufactering firms which we have direct partnership.
-            purchase.
-
-            <h3>Fast Shipping</h3>
-            We make sure you recieve your devices as soon as we conclude on the payment. We also provide free
-            returns if you are not satisfied.
-
-            <h3>Quality Assurance</h3>
-            For every purchase you make, we will ensure there are no damages or faults.
-        </div>
-        <div class="youtube"><iframe width="420" style="border:none" ; height="345"
-                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-            </iframe></div>
-        <div class="products">
-            <div class="grid-item">
-                <h2> Servers</h2>
-                <p class="producttext">
-                    Centralizing critical information and making operations more effective through deploying the
-                    right
-                    server is an ideal solution for your business.<br>Our exclusive rack, blade and tower server
-                    solutions help industries to boost their application performance.
-
-                <div><a href="select" target="_self" class="selectbutton"> SELECT</a></div>
             </div>
-            <div class="grid-item">
-                <h2>Monitors & Projectors</h2>
-                <p class="producttext">
-                    Avenue3 is where you’ll find every category of monitors & projectors along with experts that
-                    simplify network configuration and compliance.
-                <div><a href="select" target="_self" class="selectbutton"> SELECT</a></div>
+            <div class="nav">
+                <ul>
+                    <li><a href="enterprise struture">Enterprise Struture</a></li>
+                    <li><a href="organizational unit">Organizational Unit</a></li>
+                    <li><a href="enterprise struture">General Ledger</a></li>
+                    <li><a href="organizational unit">Account Payable</a></li>
+                    <li><a href="enterprise struture"> Account Receiveable</a></li>
+                    <li><a href="organizational unit"> Fixed Asset</a></li>
+                    <li><a href="enterprise struture"> Bank</a></li>
+                    <li><a href="organizational unit"> Fund Management</a></li>
+                    <li><a href="enterprise struture">Enterprise Struture</a></li>
+                    <li><a href="organizational unit">Organizational Unit</a></li>
+                    <li><a href="enterprise struture">General Ledger</a></li>
+                    <li><a href="organizational unit">Account Payable</a></li>
+                    <li><a href="enterprise struture"> Account Receiveable</a></li>
+                    <li><a href="organizational unit"> Fixed Asset</a></li>
+                    <li><a href="enterprise struture"> Bank</a></li>
+                    <li><a href="organizational unit"> Fund Management</a></li>
+                </ul>
+
             </div>
-            <div class="grid-item">
-                <h2>Storage & Backup</h2>
-                <p class="producttext">
-                    Avenue3 is where you’ll find every category of storage & backup along with experts that simplify
-                    network configuration and compliance.
-                </p>
-                <div><a href="select" target="_self" class="selectbutton"> SELECT</a>
-                </div>
+            <div class="advert">
+                <h2>Upcoming Training</h2><br>
+                Course:SAP MM Modulet
+                <br>Date: 27th June 2021
+                <br>Course fee: N250,000
+                <br>Duration: 2 weeks
+                <br>Method: Virtual<br>
+                <br><a href="course registration">Register here</a>
+            </div>
+            <div class="advert2">
+                <h1>AIRTEL</h1>
+                <br>You do plenty with the code 444# also visit the nearest Airtel outlet to link your NIN number.
+                <br>This is mandatory from NCC
             </div>
         </div>
-        <div class="footer">
-            <ul>
-                <li><a href="privacy" target="_self"> Privacy</a></li>
-                <li><a href="terms" target="_self"> Terms</a></li>
-                <li><a href="contact" target="_self"> Contact</a></li>
-            </ul>
-            <p
-                style="color: black; padding-top:40px;padding-left: 20px; text-align: right; display: flex; flex-direction: row; justify-content: flex-start;">
-                Copyright West Africa Partner</p>
+        <div class="grid-item">
+            <div class="content">
+                <h1>Enterprise Structure</h1>
+                <h2>A Company</h2>A company is defined as the smallest unit for which financial statements can be
+                created in
+                according to relevant legal requirement.
+                In SAP FI, a company can comprise of multiple codes, however it acts as a single unit for which
+                financial
+                statements are available. All the company codes must use the same chart of accounts list and fiscal
+                year,
+                however each company code can have a different local currency.
+                <h2>Company code:</h2> it is the smallest organizational unit of external accounting for which a
+                complete,
+                self-contained set of accounts can be created. This includes the entry of all transactions that must be
+                posted and creation of all items for legal individual financial statement, such as balance sheet and
+                individual profit and loss statement.
 
+                <h2>Internal Order:</h2> SAP CO internal order monitors the parts of the costs and in a few cases, it
+                also
+                monitors
+                the revenues of the organization. In NACA internal orders are activities ie interventions.
+                Internal
+                order
+                are use to track cost of individual activities.
+
+                <h2>Business Area:</h2> Business Areas are used to differentiate transactions that come from different
+                lines of
+                business in a company
+
+                <h2>Functional Area:</h2> Function Areas in finance accounting are used to define the expenses in a
+                company
+                according
+                to individual function units. In NACA we designed it as cost grouping
+
+                <h2>Cost Centre:</h2> A Cost Center is area were the cost are incurred. Is defined as a component in an
+                organization
+                that adds to the cost and indirectly adds to the profit of the organization. Examples include
+                Marketing
+                and
+                Customer Service.
+                <br>A company can classify a business unit in three ways −<br>
+                • Profit center,<br>
+                • Cost center, or<br>
+
+                <h2>SAP Data:</h2>
+                Data are stored in SAP database in real time. SAP has two types of data
+                Transactional Data: Transaction data are day to day business data e.g Document numbers
+                Master Data: Master data are data that do not change in time, master data are used by different
+                modules.
+                E.g
+                <br>Vendor information, Staff information etc
+
+                <h2>Navigation</h2>
+                <h3>Logon:</h3> All staff had logon and logoff SAP, they also knows how to change password at first
+                login
+
+                <h3>Navigation</h3>
+                <strong>Logon:</strong> All staff had logon and logoff SAP, they also knows how to change password at
+                first login<br>
+
+
+                <strong>SAP Window: </strong>This is the user interface to the SAP system<br>
+
+                <b>Transaction code:</b> A transaction code is a faster way that can be used to reach a transaction
+                screen
+                without
+                using a menu path. It is an alphanumeric value that identifies a “transaction”, such as FB60,
+                which is
+                used
+                for Entering a Vendor Invoice
+
+                Navigation Arrows:
+
+                Enter: Back, Exit, cancel<br>
+
+                <b>Creating a new session:</b> You can work with multiple sessions (up to 6) of SAP. A session is
+                equivalent to
+                a
+                window. What this feature allows is to have two, or more, windows open at the same time. You can
+                use /n
+                in
+                the Transaction code box
+
+                <br>
+                <b>Creating Favorites:</b>
+                A favorite is just like a bookmark in a Browser, which enables you to reach a transaction
+                without using
+                a
+                menu path or typing in a transaction code. You can add multiple, frequently used, transactions
+                to your
+                list
+                of favorites so that you can reach your destination quickly without having to remember either
+                the menu
+                path
+                or the transaction code.
+                To add a favorite: Navigate to the transaction code that you want to add to your favorites and
+                highlight
+                it
+                by clicking on it once
+                Click on Favorites on the menu bar
+                Click on Add You may also click and drag the transaction into your favorites
+
+                <br><b>Status Bar:</b>
+                The Status Bar is located at the bottom of the SAP screen. It displays important system
+                messages, such
+                as
+                errors and completion of transactions, as well as other session information. The example below
+                shows the
+                message generated by the system when a requisition was saved:
+
+
+                <h2>GENERAL LEDGER</h2>
+                General Ledger Posting – Creating a GL document<br>
+                <strong>Use:</strong>
+                Every document consists of a document header and two or more line items .The document header
+                contains
+                information that is valid for the whole document, such as the document date and the document
+                number .It
+                also
+                includes controlling information such as the document type.
+                The line items only contain information on the particular item in question, for instance an
+                account
+                number
+                and amount. Whether any additional information is present depends on the business transaction
+                involved.
+                The system creates the document, updates the transaction figures for the accounts affected, and
+                in some
+                cases, displays an internally assigned document number when the document is posted.
+            </div>
         </div>
-
     </div>
+    <div class="contact">
+        <div>
+            <ul>
+                <li><a href="enterprise" target="_blank">Enterprise struture</a></li>
+                <li><a href="enterprise" target="_blank">Organizational Unit</a></li>
+                <li><a href="enterprise" target="_blank">Account payable</a></li>
+                <li><a href="enterprise" target="_blank">Account Receiveable</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li><a href="enterprise" target="_blank">Basis</a></li>
+                <li><a href="enterprise" target="_blank">Fixed Asset</a></li>
+                <li><a href="enterprise" target="_blank">Procure to pay</a></li>
+                <li><a href="enterprise" target="_blank">Material Management</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li><a href="enterprise" target="_blank">Electronic Bank Statment</a></li>
+                <li><a href="enterprise" target="_blank">Fund Management</a></li>
+                <li><a href="enterprise" target="_blank">Vendor Master Data</a></li>
+                <li><a href="enterprise" target="_blank">GL Master Data</a></li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <p class="bottom" style="color: gray;">
+                <b>About the Author:</b> <br>An experienced Business Information System Experts with over 10 years of
+                industry
+                experiences.
+                Specialized in designing, developing, implementation, quality assurance and Tech-functional support
+                of
+                broad range of
+                Enterprise Resource Planning (ERP) and Web Applications. He is proficient in HTML, CSS and
+                JavaScript;
+                plus modern libraries
+                and frameworks.<br>
+                <a href="contact us" target="_blank">Contact</a>
+            </p>
+        </div>
+    </footer>
 </body>
 
 </html>
